@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-22.11";
+      url = "github:NixOS/nixpkgs/nixos-23.11";
     };
     flake-utils = {
       url = "github:numtide/flake-utils";
@@ -48,10 +48,10 @@
           udev
           mold
           alsaLib
-          xlibsWrapper
           vulkan-tools
           vulkan-headers
           vulkan-validation-layers
+	  libxkbcommon
         ]);
     in {
       defaultPackage = platform.buildRustPackage {
